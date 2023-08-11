@@ -15,14 +15,17 @@ terraform {
   }
 }
 
+
 provider "aws" {
   region = var.region
   default_tags {
     tags = {
-      Project = "T101-Study-6week"
+      Project = "**T101-Study-6week**"
+      **Owner = "jerry & tom"**
     }
   }
 }
+
 
 resource "aws_vpc" "hashicat" {
   cidr_block           = var.address_space
